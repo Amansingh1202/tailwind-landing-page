@@ -1,0 +1,18 @@
+.hello{
+    color:red;
+}
+
+@tailwind base;
+@tailwind components;
+
+.btn{
+    @apply inline-block px-5 py-3 uppercase tracking-wider font-semibold text-sm rounded-lg sm:text-base focus:outline-none focus:ring focus:ring-offset-2 focus:ring-opacity-50 
+}
+
+.btn-primary{
+    @apply bg-indigo-500 text-white hover:bg-indigo-400 focus:ring-indigo-500 active:bg-indigo-600;
+}
+.btn-secondary{
+    @apply bg-gray-300 text-gray-800 hover:bg-gray-300 focus:ring-gray-400 active:bg-gray-400;
+}
+@tailwind utilities;
