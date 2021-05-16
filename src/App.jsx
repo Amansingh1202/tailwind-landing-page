@@ -1,7 +1,10 @@
 import React from "react";
+import popularDestinations from "./data/popularDestinations";
+import DestinationCard from "./components/DestinationCard";
 
 export default function App(){
     return(
+        <div>
         <div className="grid lg:grid-cols-2">
 <div className="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:px-12 lg:py-24 lg:max-w-full">
 <img className="h-10" src="./img/logo.svg" alt="logo"/>
@@ -19,5 +22,17 @@ export default function App(){
 <img className="absolute inset-0 w-full h-full object-cover object-center" src="./img/beach-work.jpg"  alt="workation"/>
 </div>
 </div>
+
+<div className="max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-8 lg:px-12 py-8">
+        <h2 className="text-xl text-gray-900">Popular destinations</h2>
+        <p className="mt-2 text-gray-600">A selection of great work-friendly cities with lots to see and explore.</p>
+        <div className="mt-6 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
+          {popularDestinations.map((destination) => (
+            <DestinationCard destination={destination} key={destination.city} />
+          ))}
+        </div>
+      </div>
+</div>
+
     )
 }
